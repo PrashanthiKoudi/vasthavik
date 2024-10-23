@@ -1,0 +1,203 @@
+.container {
+  width: 100vw;
+}
+
+.loginModal {
+  position: relative;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  /* top: -16%; */
+  text-align: center;
+  display: flex;
+  align-Items: 'center';
+  align-items: center;
+}
+
+.login {
+  position: relative;
+  left: 39%;
+  top: 10px;
+  z-index: 1;
+  border: 1px;
+  border-radius: 50%;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+}
+
+.univbox {
+  position: relative;
+  top: 52px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  width: 48%;
+  height: 400px;
+}
+
+.uni{
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  /* justify-content: center; */
+  gap: 15%;
+  /* padding: 10%; */
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.page{
+  height: 40vw;
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: auto;
+  margin-top: 3%;
+}
+
+.column{
+  height: 40vw;
+  width: 21vw;
+}
+
+.grid{
+  height: 40vw;
+  width: 77vw;
+}
+
+.row{
+  width: 98vw;
+  display: flex;
+  flex-direction: row;
+  height: 13vw;
+  justify-content: space-between;
+}
+
+.block{
+  height: 13vw;
+  width: 35vw;
+  border: solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3%;
+  align-items: center;
+  margin: 10px; 
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.blkimg{
+  width: 93px;
+  height: 90px;
+  background-size: cover;
+}
+
+.certiimg{
+  width: 124px;
+  height: 71px;
+  background-size: cover;
+}
+
+.reqimg{
+  width: 90px;
+  height: 79px;
+  background-size: cover;
+}
+
+.viewimg{
+  width: 99px;
+  height: 79px;
+  background-size: cover;
+}
+
+/* StudentForm.css */
+
+/* Center the form container */
+.form-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style the form box */
+.form-box {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  max-width: 100%;
+}
+
+/* Style form elements */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.table-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.student-table th, .student-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.student-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #f2f2f2;
+  color: black;
+}
