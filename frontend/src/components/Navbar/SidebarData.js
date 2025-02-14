@@ -5,12 +5,15 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 import * as RiIcons from "react-icons/ri";
+import { PiStudentFill } from "react-icons/pi";
+import { MdPostAdd } from "react-icons/md";
+import { IoIosPeople } from "react-icons/io";
 
 export const SidebarData = [
     {
         title: "Add Student",
         path: "/addstud",
-        icon: <AiIcons.AiFillHome />,
+        icon: <PiStudentFill/>,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
 
@@ -26,19 +29,19 @@ export const SidebarData = [
     {
         title: "View All Students",
         path: "/viewstud",
-        icon: <FaIcons.FaPhone />,
+        icon: <IoIosPeople/>,
+    },
+    {
+        title: "View All Certificates",
+        path: "/verifycerti",
+        icon: <IoIosPeople/>,
     },
     {
         title: "Issue Certificates",
         path: "/issuecerti",
-        icon: <FaIcons.FaEnvelopeOpenText />,
+        icon: <MdPostAdd />,
 
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
-    },
-    {
-        title: "Support",
-        path: "/support",
-        icon: <IoIcons.IoMdHelpCircle />,
     },
 ];

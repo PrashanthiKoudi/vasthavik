@@ -9,6 +9,7 @@ import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from "react-icons/lib";
 import { useNavigate } from "react-router-dom";
+import logout from '../assets_components/logout.webp';
 
 const Nav = styled.div`
     height: 80px;
@@ -27,7 +28,7 @@ const NavIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
     width: 250px;
     height: 100vh;
     display: flex;
@@ -69,14 +70,15 @@ const handleLogout = () => {
                         style={{
                             textAlign: "center",
                             marginLeft: "20px",
+                            color:"white"
                         }}
                     >
                         Vasthavik
                     </h1>
                             <ul class="nav-items">
-            <li onClick={handleLogout}>Logout</li> {/* Call handleLogout on click */}
-            <li onClick={()=> navigate("/student")} >Student</li>
-            <li onClick={()=> navigate("/employee")} >Employee</li>
+                            <li onClick={handleLogout}>
+    <img src={logout} alt="Logout" style={{ width: '30px', height: '30px' }} />
+</li>
         </ul>
                 </Nav>
                 <SidebarNav sidebar={sidebar}>

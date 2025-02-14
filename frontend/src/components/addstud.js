@@ -3,6 +3,9 @@ import Sidebar from "./Navbar/Sidebar";
 import "../App.css";
 import "../index.css";
 import axios from "axios";
+import stuImage from '../assets/test10.jpeg';
+import gsuImage from '../assets/test10.jpeg';
+
 import {
     AboutUs,
     OurAim,
@@ -41,7 +44,7 @@ const Addstud = () => {
             // Sending data to the API using axios POST request
 
 
-            const response = await axios.post("http://127.0.0.1:5000/post_addstud", formData);
+            const response = await axios.post("http://localhost:5001/post_addstud", formData);
             console.log("Response Data: ", response.data);
 
             // Handle successful submission, e.g., show a message or clear form
@@ -66,6 +69,14 @@ const Addstud = () => {
     };
     return (
         <>
+        <div
+                style={{
+                    backgroundImage: `url(${stuImage})`, backgroundSize: 'cover', backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                                       minHeight: '100vh', // Ensure the background covers the full height of the viewport
+                    margin: 0,           // Remove any default margins
+                    padding: 0,
+                }}
+            >
             <Sidebar />
             <div className="form-container">
                 <div className="form-box">
@@ -158,20 +169,13 @@ const Addstud = () => {
                             </select>
                         </div>
 
-                        <button 
-    type="submit"
-    style={{ 
-        display: "block",       // Ensures the button is treated as a block-level element
-        margin: "20px auto",    // Centers the button horizontally
-        padding: "10px 20px",   // Adds some padding for a better appearance
-        textAlign: "center"     // Centers the text inside the button
-    }}
->
-    Create Student Account
-</button>
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>
+    <button type="submit" className="cta-button">Create Student Account</button>
+</div>
 
                     </form>
                 </div>
+            </div>
             </div>
         </>
     );

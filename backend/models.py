@@ -36,7 +36,7 @@ class Stud (db.Model):
 
     
 class Certi(db.Model):
-    __table__name = "certi"
+    __tablename__ = "certi"  # Correct this line
     certi_id = db.Column(db.Integer,primary_key = True, autoincrement = True)
     grade = db.Column(db.String)
     stud_id = db.Column(db.Integer,db.ForeignKey('stud.stud_id'))

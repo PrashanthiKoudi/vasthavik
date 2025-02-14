@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
 import axios from 'axios';
 import univImage from './assets_components/emp.png'; // Import the image
+import { useNavigate } from "react-router-dom";
+import logo from '../assets/logo2.png'
 
 
 
@@ -10,9 +12,10 @@ export default function () {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
     // function checkLogin() {
 
-    //     let respose = app.get('http://127.0.0.1:5000/get_univ/{}');
+    //     let respose = app.get('http://localhost:5001/get_univ/{}');
 
     //     if (Response.statusCode === 200) {
     //         // send to next page
@@ -30,7 +33,7 @@ export default function () {
             alert("Password has left Blank!");
         }
         else {
-            axios.post('http://127.0.0.1:5000/post_univ', { username, password })
+            axios.post('http://localhost:5001/post_univ', { username, password })
                 .then(response => {
                     // alert(response)
                     if (response.status === 200) {
@@ -46,7 +49,17 @@ export default function () {
     return (
 
         <>
-            <Navbar />
+            <div className='university'>
+            <div className='index'>
+                <div className='univnavbar'>
+                    <img src={logo} alt="" className='logo' />
+                    <span className='logo-text' style={{ fontSize: '40px', fontWeight: 'bold' }}>Vastavik</span>
+                    <ul class="nav-items">
+                        <li onClick={() => navigate("/university")} >University</li>
+                        <li onClick={() => navigate("/student")} >Student</li>
+                        <li onClick={() => navigate("/employee")} >Recruiter</li>
+                    </ul>
+                </div>
             <div className='uni'>
                 <div className='univbox'>
                     <div className='loginModal'>
@@ -82,6 +95,8 @@ export default function () {
                         <button type="submit" className="submitButton" onClick={logInUser} style={{ marginTop: '20px' }}>Submit</button>
                     </div>
                 </div>
+            </div>
+            </div>
             </div>
         </>
 

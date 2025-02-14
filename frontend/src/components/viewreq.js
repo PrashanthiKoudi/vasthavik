@@ -3,6 +3,7 @@ import axios from 'axios';
 import Sidebar from './Navbar/Sidebar';
 import '../App.css';
 import '../index.css';
+import stuImage from '../assets/test10.jpeg';
 
 const Viewreq = () => {
     const [Certificates, setCertificates] = useState([]);
@@ -13,7 +14,7 @@ const Viewreq = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:5000/get_allcerti'); // API endpoint to get all certificates
+                const response = await axios.get('http://localhost:5001/get_allcerti'); // API endpoint to get all certificates
                 setCertificates(response.data); // Set the certificate data in state
                 setLoading(false); // Data is loaded
             } catch (err) {
@@ -38,7 +39,7 @@ const Viewreq = () => {
         const updatedCertificate = Certificates[index];
 
         try {
-            await axios.put(`http://127.0.0.1:5000/update_certi/${certificateId}`, { 
+            await axios.put(`http://localhost:5001/update_certi/${certificateId}`, { 
                 grade: updatedCertificate.grade,
                 status: updatedCertificate.status
             });
@@ -52,6 +53,14 @@ const Viewreq = () => {
     // Render the table or error/loading message
     return (
         <>
+                    <div
+                style={{
+                    backgroundImage: `url(${stuImage})`, backgroundSize: 'cover', backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                                       minHeight: '100vh', // Ensure the background covers the full height of the viewport
+                    margin: 0,           // Remove any default margins
+                    padding: 0,
+                }}
+            >
             <Sidebar />
             <div className="table-container">
                 <h2 style={{ textAlign: 'center', marginTop: '20px', marginBottom: '20px' }}>Certificate Records</h2>
@@ -111,6 +120,7 @@ const Viewreq = () => {
                         </tbody>
                     </table>
                 )}
+            </div>
             </div>
         </>
     );

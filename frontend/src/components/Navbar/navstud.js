@@ -11,7 +11,7 @@ const [id, setId] = useState("");
   return (
     <div className='navbar'>
         <img src={logo} alt="" className='logo'/> 
-       <span className='logo-text'>Vastavik</span> 
+       <h1 className='logo-text'>Vastavik</h1> 
         <ul class="nav-items">
             <li onClick={()=> navigate("/studindex")} >View Certificates</li>
             <li onClick={()=> navigate("/certireq")} >Request Certificates</li>
